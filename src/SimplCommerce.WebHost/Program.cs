@@ -32,7 +32,7 @@ void ConfigureService()
 {
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
     builder.Configuration.AddEntityFrameworkConfig(options =>
-        options.UseNpgsql(connectionString));
+        options.UseSqlServer(connectionString));
 
     GlobalConfiguration.WebRootPath = builder.Environment.WebRootPath;
     GlobalConfiguration.ContentRootPath = builder.Environment.ContentRootPath;
