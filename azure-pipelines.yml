@@ -32,10 +32,10 @@ jobs:
       projects: 'test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
-    displayName: 'Publish code'
     inputs:
       command: 'publish'
       publishWebProjects: true
+      arguments: './SimplCommerce.sln'
   - task: DotNetCoreCLI@2
     inputs:
       command: custom
