@@ -32,7 +32,7 @@ jobs:
       projects: 'test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
-    displayName: 'run tests'
+    displayName: 'Publish code'
     inputs:
       command: 'publish'
       publishWebProjects: true
